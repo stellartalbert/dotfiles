@@ -1,5 +1,5 @@
-#!/bin/bash
-read -p "Desired computer name? " COMPUTER_NAME
+echo "Desired Computer Name? "
+read COMPUTER_NAME
 
 osascript -e 'tell application "System Preferences" to quit'
 
@@ -23,6 +23,9 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
+
+# Move doct to left
+defaults write com.apple.dock orientation -string left
 
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true

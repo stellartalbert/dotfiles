@@ -17,3 +17,7 @@
   m = !"bash -c 'git branch | grep -v 'master' | xargs git branch -D'"
   nah = !"bash -c 'git reset --hard && git clean -df'"
   master = checkout master
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain

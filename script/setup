@@ -3,24 +3,24 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
 
 # Create necessary directories
 echo "--- Creating Directories ---"
-. "$DOTFILES_DIR/install/create_directories.sh"
+bash "$DOTFILES_DIR/install/create_directories.sh"
 
 # Setup macos defaults
 echo "--- Setup MacOS Defaults ---"
-. "$DOTFILES_DIR/macos/defaults.sh"
+bash "$DOTFILES_DIR/macos/defaults.sh"
 
 # Bunch of symlinks
 echo "--- Setup Symlinks ---"
-. "$DOTFILES_DIR/install/symlinks.sh"
+bash "$DOTFILES_DIR/install/symlinks.sh"
 
 # Install nvm and node
 echo "--- Install node/nvm ---"
-. "$DOTFILES_DIR/install/node_setup.sh"
+bash "$DOTFILES_DIR/install/node_setup.sh"
 
 # Clear cache
 echo "--- Clear cache ---"
-. "$DOTFILES_DIR/bin/dotfiles" clean
+bash "$DOTFILES_DIR/bin/dotfiles" clean
 
 # Replace default hosts file
 echo "--- Install hosts file ---"
-. "$DOTFILES_DIR/install/hosts.sh"
+bash "$DOTFILES_DIR/install/hosts.sh"
