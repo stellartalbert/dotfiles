@@ -1,0 +1,25 @@
+alias c='clear'
+alias .='pwd'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias ll='ls -la'
+
+# Nicer printout of path env var
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# Show and hide hidden files (dot files)
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Delete DS_Store files
+alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Clear DNS Cache
+alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "✌️ DNS flushed"'
+
+# Get IP Address
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+# Shortcut to suspend session from terminal
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"

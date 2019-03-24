@@ -1,5 +1,5 @@
 #!/bin/bash
-COMPUTER_NAME="Athena"
+read COMPUTER_NAME
 
 osascript -e 'tell application "System Preferences" to quit'
 
@@ -187,8 +187,6 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
-
-
 # Set format of date & hours in menu bar
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
 
@@ -208,7 +206,7 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
+# Remove duplicates in the “Open With” menu
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
 # Disable Resume system-wide

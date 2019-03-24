@@ -1,0 +1,20 @@
+export DOTFILES_DIR EXTRA_DIR
+DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+
+# Create necessary directories
+. "$DOTFILES_DIR/install/create_directories.sh"
+
+# Setup macos defaults
+. "$DOTFILES_DIR/macos/defaults.sh"
+
+# Bunch of symlinks
+. "$DOTFILES_DIR/install/symlinks.sh"
+
+# Install nvm and node
+. "$DOTFILES_DIR/install/node_setup.sh"
+
+# Clear cache
+. "$DOTFILES_DIR/bin/dotfiles" clean
+
+# Replace default hosts file
+. "$DOTFILES_DIR/install/hosts.sh"
