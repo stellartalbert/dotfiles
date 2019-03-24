@@ -1,23 +1,26 @@
 export DOTFILES_DIR EXTRA_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
 
-# Install nvm, node, npm
-. "$DOTFILES_DIR/install/node_setup.sh"
-
 # Install xdebug
+echo "--- Install XDebug ---"
 . "$DOTFILES_DIR/install/xdebug.sh"
 
 # Install code plugins
+echo "--- Install VSCode Plugins ---"
 . "$DOTFILES_DIR/install/code_plugins.sh"
 
 # Configure nGinx and httpd
+echo "--- Copy nGinx and https Configurations ---"
 . "$DOTFILES_DIR/install/vhost_setup.sh"
 
 # Install Powerline
+echo "--- Install Powerline Settings ---"
 . "$DOTFILES_DIR/install/powerline.sh"
 
+echo "--- Install iTerm2 Settings ---"
 # Setup iTerm
 . "$DOTFILES_DIR/macos/iterm.sh"
 
 # Add keys from keychain to ssh agent
+echo "--- Add SSH Keys from Mac Keychain ---"
 ssh-add -A 2>/dev/null;

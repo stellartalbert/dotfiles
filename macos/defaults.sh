@@ -1,5 +1,5 @@
 #!/bin/bash
-read COMPUTER_NAME
+read -p "Desired computer name? " COMPUTER_NAME
 
 osascript -e 'tell application "System Preferences" to quit'
 
