@@ -3,19 +3,23 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
 
 # Install xdebug
 echo "--- Install XDebug ---"
-. "$DOTFILES_DIR/install/xdebug.sh"
+. "$DOTFILES_DIR/post_install/xdebug.sh"
 
 # Install code plugins
 echo "--- Install VSCode Plugins ---"
-. "$DOTFILES_DIR/install/code_plugins.sh"
+. "$DOTFILES_DIR/post_install/code_plugins.sh"
 
 # Configure nGinx and httpd
 echo "--- Copy nGinx and https Configurations ---"
-. "$DOTFILES_DIR/install/vhost_setup.sh"
+. "$DOTFILES_DIR/post_install/vhost_setup.sh"
 
 # Install Powerline
 echo "--- Install Powerline Settings ---"
-. "$DOTFILES_DIR/install/powerline.sh"
+. "$DOTFILES_DIR/post_install/powerline.sh"
+
+# Post Install Symlinks
+echo "--- More Symlinks ---"
+. "$DOTFILES_DIR/post_install/symlinks.sh"
 
 echo "--- Install iTerm2 Settings ---"
 # Setup iTerm
