@@ -69,6 +69,3 @@ cask "spectacle"
 cask "spotify"
 cask "visual-studio-code"
 cask "webstorm"
-mas "Keynote", id: 409183694
-mas "LastPass", id: 926036361
-mas "Xcode", id: 497799835
