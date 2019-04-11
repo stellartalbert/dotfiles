@@ -1,9 +1,9 @@
 [user]
-  name = Barry Hylton
-  email = blhylton@blhylton.com
+  name = Chris Talbert
+  email = ctalbert@stellarstudios.com
 
 [github]
-  user = blhylton
+  user = stellartalbert
 
 [core]
   excludesfile = ~/.gitignore_global
